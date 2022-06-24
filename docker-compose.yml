@@ -1,0 +1,14 @@
+version: "2" # The Docker version
+
+volumes:
+    mongo_volume:
+
+services:
+    mongo:
+        image: mongo:4.4
+        expose:
+            - 27017
+        ports:
+            - 27017:27017
+        volumes:
+            - "mongo_volume:/usr/src/data/db"
